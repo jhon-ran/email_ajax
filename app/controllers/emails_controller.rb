@@ -23,20 +23,22 @@ end
 
   def create 
     @email = Email.new(
-      object: Faker::Hipster.words,
-      body: Faker::Hipster.sentences(number: 1))
+      object: Faker::Book.title,
+      body: Faker::Movies::BackToTheFuture.quote)
 
-    if @email.save
+      
+      if @email.save
       respond_to do |format|
         format.html { redirect_to root_path }
         format.js { }
       end
-      redirect_to root_path
+      #redirect_to root_path
       flash[:notice] = "Email créé"
-    else
-      redirect_to root_path
+      else
+      #redirect_to root_path
       flash[:notice] = "Oups, erreur à la création"
-    end
+      end
+    
   end
 
   def destroy
