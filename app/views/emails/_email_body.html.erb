@@ -5,6 +5,8 @@
 			<h4><%= @email.object %></h4>
 			<p class="text-justify"><%= @email.body %></p>
 
+      
+
 			<%= link_to "Supprimer", email_path(@email.id), data: {confirm:'Etes-vous sûr ?'}, method: 'delete', remote: true, class: "btn btn-sm btn-danger" %>     
                 
       

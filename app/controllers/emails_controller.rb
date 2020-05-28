@@ -8,8 +8,8 @@ class EmailsController < ApplicationController
   end
 
   def show
-
     @email = Email.find(params[:id])
+    
     puts "********************"
     puts @email.id
     puts @email.object
@@ -18,13 +18,13 @@ class EmailsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to show_path(@email.id) }
       format.js { }
-end
+    end
   end
 
   def create 
     @email = Email.new(
       object: Faker::Book.title,
-      body: Faker::Movies::BackToTheFuture.quote)
+      body: Faker::Movies::Lebowski.quote)
 
       
       if @email.save
