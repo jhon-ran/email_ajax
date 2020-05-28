@@ -1,9 +1,4 @@
-# Projet Gmail-like
+# Email with AJAX
 
-Dernier projet réalisé avec :purple_heart: à Toulouse
-
-
-
-* lien: [gmail like](https://email-ajax31.herokuapp.com/)
 
 
